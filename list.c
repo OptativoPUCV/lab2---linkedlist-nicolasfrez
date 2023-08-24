@@ -107,13 +107,14 @@ void * popCurrent(List * list) {
   if (list->current->prev!=NULL)
     list->current->prev->next = list->current->next;
   else
+  {
     list->tail = list->current->prev;
+    list->tail->next == NULL;
+  }
 
   list->current = list->current->next;
   return data;
-  free(temp);
   
-  return NULL;
 }
 
 void cleanList(List * list) {
