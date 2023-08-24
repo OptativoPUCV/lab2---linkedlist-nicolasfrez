@@ -124,8 +124,9 @@ void * popCurrent(List * list)
     }
     list->current = list->current->next;
     free(temp);
+    return data;
   }
-  return data;
+  return NULL;
 }
 
 void cleanList(List * list) {
