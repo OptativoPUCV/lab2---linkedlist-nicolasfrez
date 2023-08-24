@@ -40,3 +40,9 @@ list.c:32:23: error: expected ‘,’ or ‘;’ before ‘malloc’
       |                       ^~~~~~
 Compilation failed
 d1cb5b4
+Thu 24 Aug 2023 04:22:50 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+aabd3e5
