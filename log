@@ -212,3 +212,14 @@ list.c:64:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 0e9d4a7
+Thu 24 Aug 2023 05:25:19 PM UTC: 
+ list.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:75:9: error: unused variable ‘nuevo’ [-Werror=unused-variable]
+   75 |   Node *nuevo = createNode(data);
+      |         ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+21d547e
