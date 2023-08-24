@@ -366,3 +366,27 @@ list.c:118:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 c586a81
+Thu 24 Aug 2023 07:07:24 PM UTC: 
+ list.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:105:11: error: unused variable ‘temp’ [-Werror=unused-variable]
+  105 |     Node *temp = list->current;
+      |           ^~~~
+list.c:104:11: error: unused variable ‘data’ [-Werror=unused-variable]
+  104 |     void *data = list->current->data;
+      |           ^~~~
+list.c:114:22: error: statement with no effect [-Werror=unused-value]
+  114 |     list->tail->next == NULL;
+      |                      ^
+list.c:118:10: error: ‘data’ undeclared (first use in this function)
+  118 |   return data;
+      |          ^~~~
+list.c:118:10: note: each undeclared identifier is reported only once for each function it appears in
+list.c:120:1: error: control reaches end of non-void function [-Werror=return-type]
+  120 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+6545cab

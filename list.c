@@ -105,14 +105,16 @@ void * popCurrent(List * list) {
     Node *temp = list->current;
   }
   if (list->current->prev!=NULL)
+  {
     list->current->prev->next = list->current->next;
+  }
   else
   {
     list->tail = list->current->prev;
     list->tail->next == NULL;
   }
 
-  list->current = list->current->next;
+  free(list->current);
   return data;
   
 }
