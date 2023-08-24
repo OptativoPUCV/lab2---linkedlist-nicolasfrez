@@ -118,3 +118,24 @@ Thu 24 Aug 2023 04:54:26 PM UTC:
  tests:  5|4
 total_score: 25/70
 5b1bfdf
+Thu 24 Aug 2023 04:57:47 PM UTC: 
+ list.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:55:21: error: ‘data’ undeclared (first use in this function)
+   55 |   return list->tail>data
+      |                     ^~~~
+list.c:55:21: note: each undeclared identifier is reported only once for each function it appears in
+list.c:55:25: error: expected ‘;’ before ‘}’ token
+   55 |   return list->tail>data
+      |                         ^
+      |                         ;
+   56 | }
+      | ~                        
+list.c:56:1: error: control reaches end of non-void function [-Werror=return-type]
+   56 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+4500541
