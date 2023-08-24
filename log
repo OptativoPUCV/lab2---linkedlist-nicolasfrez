@@ -423,3 +423,20 @@ Thu 24 Aug 2023 07:15:58 PM UTC:
  tests:  12|0
 total_score: 70/70
 1c99ab8
+Thu 24 Aug 2023 07:18:32 PM UTC: 
+ list.c | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:108:11: error: unused variable ‘temp’ [-Werror=unused-variable]
+  108 |     Node *temp = list->current;
+      |           ^~~~
+list.c:107:11: error: unused variable ‘data’ [-Werror=unused-variable]
+  107 |     void *data = list->current->data;
+      |           ^~~~
+list.c:117:22: error: statement with no effect [-Werror=unused-value]
+  117 |     list->tail->next == NULL;
+      |                      ^
+cc1: all warnings being treated as errors
+Compilation failed
+2d28a0c
