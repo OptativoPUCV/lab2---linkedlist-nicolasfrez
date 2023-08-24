@@ -1,0 +1,29 @@
+Thu 24 Aug 2023 04:20:29 PM UTC: 
+ list.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:32:17: error: expected expression before ‘List’
+   32 |   List lista= (*List)
+      |                 ^~~~
+list.c:33:3: error: expected ‘,’ or ‘;’ before ‘malloc’
+   33 |   malloc(sizeof(List));
+      |   ^~~~~~
+list.c:34:8: error: invalid type argument of ‘->’ (have ‘List’ {aka ‘struct List’})
+   34 |   lista->head=NULL;
+      |        ^~
+list.c:35:8: error: invalid type argument of ‘->’ (have ‘List’ {aka ‘struct List’})
+   35 |   lista->tail=NULL;
+      |        ^~
+list.c:36:8: error: invalid type argument of ‘->’ (have ‘List’ {aka ‘struct List’})
+   36 |   lista->current=NULL;
+      |        ^~
+list.c:37:13: error: incompatible types when returning type ‘List’ {aka ‘struct List’} but ‘List *’ {aka ‘struct List *’} was expected
+   37 |      return lista;
+      |             ^~~~~
+list.c:38:1: error: control reaches end of non-void function [-Werror=return-type]
+   38 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+0437c9c
